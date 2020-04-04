@@ -24,10 +24,10 @@ public class Main extends JavaPlugin {
 		return accountManager;
 	}
 	
-    private InventoryManager invManager;
-    public InventoryManager invManager() {
-    	return invManager; 
-    }
+        private InventoryManager invManager;
+        public InventoryManager invManager() {
+    	        return invManager; 
+        }
 
 	
 	

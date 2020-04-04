@@ -13,18 +13,18 @@ import me.gabrideiros.correio.objects.AccountManager;
 
 public class Main extends JavaPlugin {
 	
-	public ConnectionManager connectionManager;
+	private ConnectionManager connectionManager;
 	public ConnectionManager getConnectionManager() {
 		return connectionManager;
 	}
 
 	
-	public AccountManager accountManager;
+	private AccountManager accountManager;
 	public AccountManager getAccountManager() {
 		return accountManager;
 	}
 	
-    public InventoryManager invManager;
+    private InventoryManager invManager;
     public InventoryManager invManager() {
     	return invManager; 
     }
@@ -41,11 +41,11 @@ public class Main extends JavaPlugin {
 		saveDefaultConfig();
 		
 		
-		accountManager = new AccountManager();
-		connectionManager = new ConnectionManager();
+		this.accountManager = new AccountManager();
+		this.connectionManager = new ConnectionManager();
 
-		invManager = new InventoryManager(this);
-		invManager.init();
+		this.invManager = new InventoryManager(this);
+		this.invManager.init();
 		
 		events();
 		commands();

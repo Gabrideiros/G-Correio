@@ -30,30 +30,30 @@ public class MailCommand implements CommandExecutor {
 		
 		if (args[0].equalsIgnoreCase("enviar")) {
 			if (args.length < 2) {
-				p.sendMessage("§cUtilize /correio enviar <jogador>.");
+				p.sendMessage("Â§cUtilize /correio enviar <jogador>.");
 				return true;
 			}
 			
 			Player p2 = Bukkit.getPlayer(args[1]);
 			
 			if (p2 == null) {
-				p.sendMessage("§cEste jogador não foi encontrado!");
+				p.sendMessage("Â§cEste jogador nÃ£o foi encontrado!");
 				return true;
 			}
 			
 			if (p2.getName().equals(p.getName())) {
-				p.sendMessage("§cVocê não pode enviar uma encomenda para sí mesmo!");
+				p.sendMessage("Â§cVocÃª nÃ£o pode enviar uma encomenda para sÃ­ mesmo!");
 				return true;
 			}
 			
 			ItemStack item = p.getItemInHand().clone();
 			
 			if (item == null || item.getType() == Material.AIR) {
-				p.sendMessage("§cSegure um item na mão para enviar!");
+				p.sendMessage("Â§cSegure um item na mÃ£o para enviar!");
 				return true;
 			}
 			
-	        long data = System.currentTimeMillis();
+	                long data = System.currentTimeMillis();
 			
 			
 			Main.getInstance().getAccountManager().insertAsync(p2, data, p, item);

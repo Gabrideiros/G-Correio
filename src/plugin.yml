@@ -1,0 +1,6 @@
+name: G-Correio
+main: me.gabrideiros.correio.Main
+version: 1.0
+author: Gabrideiros
+commands:
+   correio:

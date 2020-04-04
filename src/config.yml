@@ -1,7 +1,7 @@
 MySQL:
   Type: MYSQL
-  Username: megamine
-  Password: 3Woa!^F%p5*p
+  Username: root
+  Password: 
   Host: 127.0.0.1
   Port: 3306
-  Database: rankup
+  Database: 
